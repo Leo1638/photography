@@ -91,4 +91,9 @@ figcaption {
     font-size: 50px; color: white; cursor: pointer;
 }
 
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+}
+
 #caption { margin-top: 20px; color: #fff; letter-spacing: 1px; }
