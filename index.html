@@ -3,32 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Photography | Your Name</title>
-    <style>
-        body { background: #121212; color: white; font-family: sans-serif; margin: 0; padding: 20px; }
-        h1 { font-weight: 300; letter-spacing: 2px; text-align: center; }
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 15px;
-            max-width: 1200px;
-            margin: 40px auto;
-        }
-        .gallery img {
-            width: 100%;
-            height: 400px;
-            object-fit: cover; /* Keeps images uniform */
-            border-radius: 4px;
-            transition: transform 0.3s ease;
-        }
-        .gallery img:hover { transform: scale(1.02); }
-    </style>
+    <title>Photography Portfolio | Your Name</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>GALLERY</h1>
-    <div class="gallery">
-        <img src="path/to/your/photo1.webp" alt="Esports Event">
-        <img src="path/to/your/photo2.webp" alt="Night Street">
+
+    <nav class="sticky-nav">
+        <div class="logo">PHOTOGRAPHY</div>
+        <div class="links">
+            <a href="#esports">Esports</a>
+            <a href="#street">Street</a>
+            <a href="#nature">Nature</a>
         </div>
+    </nav>
+
+    <main>
+        <section id="esports">
+            <h2>Esports & Action</h2>
+            <div class="gallery-grid">
+                <figure>
+                    <img src="images/match1.webp" alt="Championship Finals - Stage Lights" data-full="images/match1.webp">
+                    <figcaption>Grand Finals 2025</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/player.webp" alt="Pro Player Focus" data-full="images/player.webp">
+                    <figcaption>Concentration</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <section id="street">
+            <h2>Street & Low Light</h2>
+            <div class="gallery-grid">
+                <figure>
+                    <img src="images/street1.webp" alt="Rainy Night in the City" data-full="images/street1.webp">
+                    <figcaption>Neon Reflections</figcaption>
+                </figure>
+            </div>
+        </section>
+    </main>
+
+    <div id="lightbox" class="lightbox">
+        <span class="close-btn">&times;</span>
+        <img id="lightbox-img" src="" alt="Enlarged view">
+        <div id="caption"></div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
