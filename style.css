@@ -42,22 +42,32 @@ h2 {
 
 /* The Grid */
 .gallery-grid {
-    column-count: 3;
-    column-gap: 20px;
+    column-count: 3;  /* Creates 3 vertical columns */
+    column-gap: 20px; /* Space between columns */
     margin: 30px 0;
 }
 
-figure {
-    margin: 0 0 20px 0;
-    break-inside: avoid;
+@media (max-width: 800px) {
+    .gallery-grid { column-count: 2; }
+}
+@media (max-width: 500px) {
+    .gallery-grid { column-count: 1; }
 }
 
+figure {
+    margin: 0 0 20px 0; /* Adds bottom spacing between photos */
+    break-inside: avoid; /* Prevents a photo from splitting across columns */
+    cursor: pointer;
+}
 img {
     width: 100%;
-    height: auto;
-    display: block;
+    height: auto; 
+    display: block; /* Removes tiny gap under images */
     border-radius: 2px;
+    transition: opacity 0.3s ease;
 }
+
+img:hover { opacity: 0.8; }
 
 figcaption {
     margin-top: 10px;
@@ -79,9 +89,10 @@ figcaption {
 }
 
 #lightbox-img {
-    max-width: 90%;
-    max-height: 80%;
-    object-fit: contain;
+    max-width: 95vw;  /* 95% of viewport width */
+    max-height: 95vh; /* 95% of viewport height */
+    object-fit: contain; /* Ensures the whole image is visible */
+    box-shadow: 0 0 30px rgba(0,0,0,0.5);
 }
 
 .close-btn {
