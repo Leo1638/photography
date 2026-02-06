@@ -3,7 +3,6 @@ const lightboxImg = document.getElementById('lightbox-img');
 const caption = document.getElementById('caption');
 const closeBtn = document.querySelector('.close-btn');
 
-// Open Lightbox
 document.querySelectorAll('.gallery-grid img').forEach(image => {
     image.onclick = () => {
         lightbox.style.display = 'flex';
@@ -12,12 +11,14 @@ document.querySelectorAll('.gallery-grid img').forEach(image => {
     };
 });
 
-// Close Function
 const closeLightbox = () => {
     lightbox.style.display = 'none';
 };
 
-closeBtn.onclick = closeLightbox;
+closeBtn.onclick = (e) => {
+    e.stopPropagation(); 
+    closeLightbox();
+};
 
 lightbox.onclick = (e) => {
     closeLightbox();
