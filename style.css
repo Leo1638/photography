@@ -99,6 +99,7 @@ figcaption {
     position: absolute;
     top: 20px; right: 40px;
     font-size: 50px; color: white; cursor: pointer;
+    z-index: 10001;
 }
 
 html {
