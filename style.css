@@ -89,9 +89,12 @@ figcaption {
 }
 
 #lightbox-img {
-    max-width: 95vw;  /* 95% of viewport width */
-    max-height: 95vh; /* 95% of viewport height */
-    object-fit: contain; /* Ensures the whole image is visible */
+    width: auto; 
+    height: auto; 
+    max-width: 95vw;
+    max-height: 95vh;
+    
+    object-fit: contain;
     box-shadow: 0 0 30px rgba(0,0,0,0.5);
 }
 
