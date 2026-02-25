@@ -1,6 +1,6 @@
 /* General Setup */
 body {
-    background-color: #0a0a0a;
+    background-color: #111010;
     color: #ffffff;
     font-family: 'Inter', -apple-system, sans-serif;
     margin: 0;
@@ -11,7 +11,7 @@ body {
 .sticky-nav {
     position: sticky;
     top: 0;
-    background: rgba(10, 10, 10, 0.95);
+    background: rgba(17, 16, 16, 0.95);
     display: flex;
     justify-content: space-between;
     padding: 20px 5%;
@@ -55,14 +55,14 @@ h2 {
 }
 
 figure {
-    margin: 0 0 20px 0; /* Adds bottom spacing between photos */
-    break-inside: avoid; /* Prevents a photo from splitting across columns */
+    margin: 0 0 0px 0;
+    break-inside: avoid;
     cursor: pointer;
 }
 img {
     width: 100%;
     height: auto; 
-    display: block; /* Removes tiny gap under images */
+    display: block;
     border-radius: 2px;
     transition: opacity 0.3s ease;
 }
@@ -81,7 +81,7 @@ figcaption {
     display: none;
     position: fixed;
     top: 0; left: 0; width: 100%; height: 100%;
-    background: rgba(0,0,0,0.95);
+    background: rgba(0,0,0,0.885);
     z-index: 1000;
     flex-direction: column;
     justify-content: center;
@@ -111,3 +111,72 @@ html {
 }
 
 #caption { margin-top: 20px; color: #fff; letter-spacing: 1px; }
+
+/* --- ABOUT SECTION --- */
+.about-section {
+    background-color: transparent;
+    color: #ffffff;
+    padding: 60px 5%;
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid #222; 
+}
+
+.about-container {
+    max-width: 900px;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.profile-pic {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid #333; 
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5); 
+}
+
+.about-text h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: #ffffff;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+.about-text p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #cccccc; 
+    margin-bottom: 20px;
+}
+
+.about-text .social-links a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    margin-right: 20px;
+    border-bottom: 2px solid transparent;
+    transition: all 0.3s;
+}
+
+.about-text .social-links a:hover {
+    color: #1155CC;
+    border-bottom: 2px solid #1155CC;
+}
+
+/* --- MOBILE RESPONSIVE --- */
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .profile-pic {
+        width: 150px;
+        height: 150px;
+        margin-bottom: 20px;
+    }
+}
